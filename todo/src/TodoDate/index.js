@@ -21,7 +21,7 @@ const Day = styled.p`
 function TodoDate () {
     return (
         <SuperContainer>
-            <Date>2022/04/20</Date>
+            <Date>2022/04/26</Date>
             <Day>Tuesday</Day>
         </SuperContainer>
     )
