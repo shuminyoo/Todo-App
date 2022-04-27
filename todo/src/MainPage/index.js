@@ -4,7 +4,7 @@ import styled from "styled-components";
 import TodoDate from "../TodoDate";
 import TodoLeft from "../TodoLeft";
 import TodoAdd from "../TodoAdd";
-
+import TodoItem from "../TodoItem"
 const SuperContainer = styled.div`
     background-color: #35cade;
     display:flex;
@@ -27,6 +27,7 @@ function MainPage () {
                 <TodoDate />
                 <TodoLeft />
                 <TodoAdd /> 
+                <TodoItem />
             </BoxContainer>
         </SuperContainer>
 
