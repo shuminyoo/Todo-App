@@ -5,7 +5,7 @@ const SuperContainer = styled.div`
     flex-direction: column;
     padding: 10px;
 `;
-const Date = styled.div`
+const Dates = styled.div`
     font-size: 25px;
     font-family: 'Roboto Mono', monospace;
     margin-top:10px;
@@ -19,10 +19,13 @@ const Day = styled.p`
 
 
 function TodoDate () {
+    const today = new Date();
+    const newday = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+    
     return (
         <SuperContainer>
-            <Date>2022/04/26</Date>
-            <Day>Tuesday</Day>
+            <Dates>{today.getFullYear()}/{today.getMonth() +1}/{today.getDate()}</Dates>
+            <Day>{ newday[today.getDay() - 1]}</Day>
         </SuperContainer>
     )
 };

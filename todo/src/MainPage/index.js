@@ -19,6 +19,15 @@ const BoxContainer = styled.div `
     border: 3px outset grey;
     margin: 30px 0 0 30px;
 `
+const Bar = styled.p`
+    position: relative;
+    justify-content: center;
+    background-color:cyan;
+    height: 2px;
+    width: 50%;
+    color:white;
+    border-radius: 30px;
+`
 function MainPage () {
 
     return (
@@ -26,6 +35,7 @@ function MainPage () {
             <BoxContainer>
                 <TodoDate />
                 <TodoLeft />
+                <Bar></Bar>
                 <TodoAdd /> 
                 <TodoItem />
             </BoxContainer>
