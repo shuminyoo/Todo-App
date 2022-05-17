@@ -20,12 +20,14 @@ const Day = styled.p`
 
 function TodoDate () {
     const today = new Date();
-    const newday = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
-    
+    // const newday = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+    const newDayName = today.toLocaleString("en-US", {weekday: "long"});
+
     return (
         <SuperContainer>
             <Dates>{today.getFullYear()}/{today.getMonth() +1}/{today.getDate()}</Dates>
-            <Day>{ newday[today.getDay() - 1]}</Day>
+            {/* <Day>{ newday[today.getDay() - 1]}</Day> */}
+            <Day>{newDayName}</Day>
         </SuperContainer>
     )
 };

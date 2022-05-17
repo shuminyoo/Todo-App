@@ -19,12 +19,12 @@ const SampleText = styled.p`
     padding-bottom:
 `
 const Bin = styled.img`
-    
     width: 25px;
     height: 25px;
 
 `
-function TodoItem () {
+function TodoItem ({todos}) {
+
     return (
          <SuperContainer>
             <DoneInput></DoneInput>

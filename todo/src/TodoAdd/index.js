@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled from "styled-components";
 
 const SuperContainer = styled.div`
@@ -22,14 +23,39 @@ const InputButton = styled.button`
     border: 0.5px solid #b6e0e0;
 `
 
-function TodoAdd () {
+function TodoAdd ( {todos, updateList} ) {
+
+    const [todo, setTodo] = useState({
+        text: "",
+    });
+
+    const buttonPress = () => {
+        updateList(todo);
+        // if (todo.text === "bingo") {
+        // alert("Yay!")
+        // return;
+        // } else {
+        //     alert("noooo")
+    };
+    
+
+    const inputNewTodo = (e) => { 
+        const { name, value } = e.target; //why does todo not work here? 'name' is the name of the variable, in this case, 'text' 
+        setTodo ({
+            ...todo, 
+            [name] : value, //single code does everything, as all the code have a different 'name' value. 
+        })
+    }
+    
     return (
         <SuperContainer>
-        <TodoInput
-         type = "text"
+         <TodoInput
+          type = "text"
+          value = {todo.text}
+          name = "text"
+          onChange = {inputNewTodo}
          ></TodoInput>
-
-         <InputButton>Add</InputButton>
+         <InputButton onClick={buttonPress} >Add</InputButton>
         </SuperContainer>
     )
 };

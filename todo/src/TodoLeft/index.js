@@ -8,9 +8,13 @@ const Remaining = styled.p`
     padding-left: 10px;
     
 `
-function TodoLeft () {
+
+function TodoLeft ({todos}) {
+
+    //todos => []
+
     return (
-        <Remaining>20 Todos left</Remaining>
+        <Remaining>{todos.length} Todos left</Remaining>
     )
 };
 
