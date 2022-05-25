@@ -48,12 +48,6 @@ function MainPage () {
     setTodos([...todos,todo]);
 };
 
-const newText = document.getElementById("Textbox");
-
-const newTodoset = (newText) => {
-    newText.innerHTML = ("text")
-    console.log("pressed")
-};
 console.log(todos);
 
     return (
