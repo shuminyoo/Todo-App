@@ -23,15 +23,29 @@ const Bin = styled.img`
     height: 25px;
 
 `
-function TodoItem ({todos}) {
+function TodoItem ({todos, updateList}) {
 
-    return (
+    const newTextbox = document.getElementById("Textbox");
+
+    const newTodoset = () => {
+        newTextbox.innerHTML = ("test")
+        console.log("pressed")
+    };
+
+    const binPress = () => {
+        alert("delete")
+    };
+
+    console.log(todos);
+    return ( 
          <SuperContainer>
             <DoneInput></DoneInput>
-            <SampleText>Finish making snow</SampleText>
-            <Bin src="https://icon-library.com/images/trash-can-icon-black-and-white/trash-can-icon-black-and-white-5.jpg"></Bin>
+            <SampleText id="Textbox">Finish making snow</SampleText>
+            <Bin 
+            onClick={(newTodoset)}
+            src="https://icon-library.com/images/trash-can-icon-black-and-white/trash-can-icon-black-and-white-5.jpg"></Bin>
          </SuperContainer>
     )    
 };
 
-export default TodoItem; 
+export default TodoItem 

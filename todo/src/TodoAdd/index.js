@@ -26,11 +26,14 @@ const InputButton = styled.button`
 function TodoAdd ( {todos, updateList} ) {
 
     const [todo, setTodo] = useState({
+        id: null,
         text: "",
+        isDone: false,
     });
 
     const buttonPress = () => {
         updateList(todo);
+        
         // if (todo.text === "bingo") {
         // alert("Yay!")
         // return;
@@ -42,8 +45,12 @@ function TodoAdd ( {todos, updateList} ) {
     const inputNewTodo = (e) => { 
         const { name, value } = e.target; //why does todo not work here? 'name' is the name of the variable, in this case, 'text' 
         setTodo ({
-            ...todo, 
-            [name] : value, //single code does everything, as all the code have a different 'name' value. 
+            id:todos.length +1,
+            text: value,
+            isDone: false, //the new code
+            // ...todo, 
+            // [name] : value, //single code does everything, as all the code have a different 'name' value. 
+            // id: todos.length+1
         })
     }
     
