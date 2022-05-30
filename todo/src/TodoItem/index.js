@@ -5,8 +5,8 @@ const SuperContainer = styled.div`
     flex-direction:row;
     padding: 10px;
 `
-const DoneInput = styled.div`
-    background-color:blue;
+const DoneInput = styled.input`
+    background-color:white;
     height: 15px;
     width: 15px;
     margin:15px 5px 5px 5px;
@@ -23,26 +23,20 @@ const Bin = styled.img`
     height: 25px;
 
 `
-function TodoItem ({todos, updateList}) {
-
-    const newTextbox = document.getElementById("Textbox");
-
-    const newTodoset = () => {
-        newTextbox.innerHTML = ("test")
-        console.log("pressed")
-    };
+function TodoItem ({todos, removeTodo}) {
+ console.log(todos);
 
     const binPress = () => {
-        alert("delete")
-    };
+        removeTodo()
+        console.log(todos);
+    }
 
-    console.log(todos);
     return ( 
          <SuperContainer>
-            <DoneInput></DoneInput>
-            <SampleText id="Textbox">Finish making snow</SampleText>
+            <DoneInput type="button"></DoneInput>
+            <SampleText>{todos[0].text}</SampleText>
             <Bin 
-            onClick={(newTodoset)}
+            onClick={binPress}
             src="https://icon-library.com/images/trash-can-icon-black-and-white/trash-can-icon-black-and-white-5.jpg"></Bin>
          </SuperContainer>
     )    
