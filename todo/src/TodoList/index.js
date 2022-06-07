@@ -1,14 +1,20 @@
 import styled from "styled-components";
+import TodoItem from "../TodoItem";
 
-const SampleText = styled.p`
-    font-family: Helvetica;
-    font-size: 15px;
-    padding-bottom:
-`
+const SuperContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
 
-function TodoList () {
+function TodoList ({todos , removeTodo}) {
     return (
-        <SampleText>SampleText</SampleText>
+        <SuperContainer>
+            {todos.map((todo) => (
+                <TodoItem todo={todo} removeTodo={removeTodo} ></TodoItem>
+             ))} 
+             {/*looping command is loping onyl one todo, .map is specil the one above */}
+
+        </SuperContainer>
     )
 };
 

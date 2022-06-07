@@ -23,18 +23,16 @@ const Bin = styled.img`
     height: 25px;
 
 `
-function TodoItem ({todos, removeTodo}) {
- console.log(todos);
+function TodoItem ({todo , removeTodo}) {
 
     const binPress = () => {
         removeTodo()
-        console.log(todos);
     }
 
     return ( 
          <SuperContainer>
-            <DoneInput type="button" isDone={todos[0].isDone} />
-            <SampleText>{todos[0].text}</SampleText>
+            <DoneInput type="button" isDone={todo.isDone} />
+            <SampleText>{todo.text}</SampleText>
             <Bin 
             onClick={binPress}
             src="https://icon-library.com/images/trash-can-icon-black-and-white/trash-can-icon-black-and-white-5.jpg"></Bin>

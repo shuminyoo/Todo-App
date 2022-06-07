@@ -33,7 +33,7 @@ function TodoAdd ( {todos, updateList} ) {
 
     const buttonPress = () => {
         updateList(todo);
-        
+        console.log(todos)
         // if (todo.text === "bingo") {
         // alert("Yay!")
         // return;

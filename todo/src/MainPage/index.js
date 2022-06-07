@@ -4,7 +4,6 @@ import styled, { useTheme } from "styled-components";
 import TodoDate from "../TodoDate";
 import TodoLeft from "../TodoLeft";
 import TodoAdd from "../TodoAdd";
-import TodoItem from "../TodoItem";
 import TodoList from "../TodoList";
 
 const SuperContainer = styled.div`
@@ -61,8 +60,9 @@ console.log(todos);
                 <TodoLeft todos={todos} />
                 <Bar></Bar>
 
-                <TodoAdd todos={todos} updateList={addTodo}/> 
-                <TodoItem todos={todos} removeTodo={deleteTodo}/>
+                <TodoAdd todos={todos} updateList={addTodo}/>
+                <TodoList todos={todos} removeTodo={deleteTodo} />
+                {/* <TodoItem todos={todos} removeTodo={deleteTodo}/> */}
             </BoxContainer>
         </SuperContainer>
 
