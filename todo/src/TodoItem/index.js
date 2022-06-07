@@ -33,7 +33,7 @@ function TodoItem ({todos, removeTodo}) {
 
     return ( 
          <SuperContainer>
-            <DoneInput type="button"></DoneInput>
+            <DoneInput type="button" isDone={todos[0].isDone} />
             <SampleText>{todos[0].text}</SampleText>
             <Bin 
             onClick={binPress}

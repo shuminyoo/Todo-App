@@ -4,7 +4,8 @@ import styled, { useTheme } from "styled-components";
 import TodoDate from "../TodoDate";
 import TodoLeft from "../TodoLeft";
 import TodoAdd from "../TodoAdd";
-import TodoItem from "../TodoItem"
+import TodoItem from "../TodoItem";
+import TodoList from "../TodoList";
 
 const SuperContainer = styled.div`
     background-color: #35cade;
@@ -41,7 +42,7 @@ function MainPage () {
 //paretn has creawrted function, and child usesd the function. TWO Functions the same decalred on the MainPage, and then able to call both function in the child... ...todos is the copy entire list of todos
 //Adding 
  const [todos, setTodos] = useState([
-     { isDone: false, text: "hello", id: 0 }
+     { isDone: false, text: "hello", id: 1 }
  ]);
 
  const addTodo = (todo) => {
