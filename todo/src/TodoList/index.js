@@ -6,7 +6,7 @@ const SuperContainer = styled.div`
     flex-direction: column;
 `;
 
-function TodoList ({todos , removeTodo}) {
+function TodoList ({todos , removeTodo,}) {
     return (
         <SuperContainer>
             {todos.map((todo) => (

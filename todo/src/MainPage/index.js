@@ -41,15 +41,21 @@ function MainPage () {
 //paretn has creawrted function, and child usesd the function. TWO Functions the same decalred on the MainPage, and then able to call both function in the child... ...todos is the copy entire list of todos
 //Adding 
  const [todos, setTodos] = useState([
-     { isDone: false, text: "hello", id: 1 }
+    //  { isDone: false, text: "hello", id: 1 }
  ]);
 
  const addTodo = (todo) => {
     setTodos([...todos,todo]);
 };
 
-const deleteTodo = () => {
-    setTodos([])
+const deleteTodo = (id) => {
+    console.log(id)
+    const newTodos = todos.filter((todo) => todo.id != id);
+    setTodos((newTodos))
+
+    //.fillter  and .map. 
+    //.filter -> 
+    //.map --> iterate the array
 }
 console.log(todos);
 
@@ -61,7 +67,7 @@ console.log(todos);
                 <Bar></Bar>
 
                 <TodoAdd todos={todos} updateList={addTodo}/>
-                <TodoList todos={todos} removeTodo={deleteTodo} />
+                <TodoList todos={todos} removeTodo={deleteTodo}/>
                 {/* <TodoItem todos={todos} removeTodo={deleteTodo}/> */}
             </BoxContainer>
         </SuperContainer>

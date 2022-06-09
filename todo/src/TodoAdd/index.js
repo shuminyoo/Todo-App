@@ -47,7 +47,7 @@ function TodoAdd ( {todos, updateList} ) {
         setTodo ({
             id:todos.length +1,
             text: value,
-            isDone: false, //the new code
+            isDone: true, //the new code
             // ...todo, 
             // [name] : value, //single code does everything, as all the code have a different 'name' value. 
             // id: todos.length+1
