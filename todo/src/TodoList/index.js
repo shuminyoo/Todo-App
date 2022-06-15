@@ -6,11 +6,11 @@ const SuperContainer = styled.div`
     flex-direction: column;
 `;
 
-function TodoList ({todos , removeTodo,}) {
+function TodoList ({todos , removeTodo, updateListNew}) {
     return (
         <SuperContainer>
             {todos.map((todo) => (
-                <TodoItem todo={todo} removeTodo={removeTodo} ></TodoItem>
+                <TodoItem todo={todo} removeTodo={removeTodo} updateListNew={updateListNew}></TodoItem>
              ))} 
              {/*looping command is loping onyl one todo, .map is specil the one above */}
 

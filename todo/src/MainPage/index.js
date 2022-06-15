@@ -5,6 +5,7 @@ import TodoDate from "../TodoDate";
 import TodoLeft from "../TodoLeft";
 import TodoAdd from "../TodoAdd";
 import TodoList from "../TodoList";
+import { getValue } from "@testing-library/user-event/dist/utils";
 
 const SuperContainer = styled.div`
     background-color: #35cade;
@@ -56,8 +57,21 @@ const deleteTodo = (id) => {
     //.fillter  and .map. 
     //.filter -> 
     //.map --> iterate the array
-}
+} 
 console.log(todos);
+
+const changeIsDone = (id,todo) => {
+    console.log(id)
+    const currentTodo = todos[id - 1]
+    if (currentTodo.isDone === true){
+        setTodos([...todos,])
+    } else {
+        setTodos([...todos,todo])
+    }
+    // setTodos([...todos,id])
+};
+
+
 
     return (
         <SuperContainer>
@@ -67,7 +81,7 @@ console.log(todos);
                 <Bar></Bar>
 
                 <TodoAdd todos={todos} updateList={addTodo}/>
-                <TodoList todos={todos} removeTodo={deleteTodo}/>
+                <TodoList todos={todos} removeTodo={deleteTodo} updateListNew={changeIsDone} />
                 {/* <TodoItem todos={todos} removeTodo={deleteTodo}/> */}
             </BoxContainer>
         </SuperContainer>

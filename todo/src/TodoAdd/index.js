@@ -23,7 +23,7 @@ const InputButton = styled.button`
     border: 0.5px solid #b6e0e0;
 `
 
-function TodoAdd ( {todos, updateList} ) {
+function TodoAdd ( {todos, updateList, } ) {
 
     const [todo, setTodo] = useState({
         id: null,
@@ -47,7 +47,7 @@ function TodoAdd ( {todos, updateList} ) {
         setTodo ({
             id:todos.length +1,
             text: value,
-            isDone: true, //the new code
+            isDone: false, //the new code
             // ...todo, 
             // [name] : value, //single code does everything, as all the code have a different 'name' value. 
             // id: todos.length+1

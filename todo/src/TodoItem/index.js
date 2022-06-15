@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components"
+import TodoList from "../TodoList"
 
 const SuperContainer = styled.div`
     display:flex; 
@@ -29,15 +30,20 @@ const Bin = styled.img`
     height: 25px;
 
 `
-function TodoItem ({todo , removeTodo, }) {
+function TodoItem ({todo , removeTodo, updateListNew }) {
 
+    
     const binPress = () => {
         removeTodo(todo.id)
+    }
+    const istheTodoDone = () => {
+        alert("checking")
+        updateListNew(todo.isDone)
     }
 
     return ( 
          <SuperContainer>
-            <DoneInput isDone={todo.isDone} />
+            <DoneInput onClick={istheTodoDone}/>
             <SampleText>{todo.text}</SampleText>
             <Bin 
             onClick={binPress}
