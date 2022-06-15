@@ -40,7 +40,7 @@ function TodoItem ({todo , removeTodo, updateListNew }) {
         alert("checking")
         updateListNew(todo.isDone)
     }
-
+    console.log(updateListNew.isDone)
     return ( 
          <SuperContainer>
             <DoneInput onClick={istheTodoDone}/>

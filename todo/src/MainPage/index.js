@@ -60,10 +60,11 @@ const deleteTodo = (id) => {
 } 
 console.log(todos);
 
+//finals
 const changeIsDone = (id,todo) => {
     console.log(id)
     const currentTodo = todos[id - 1]
-    if (currentTodo.isDone === true){
+    if (currentTodo.isDone === false){
         setTodos([...todos,])
     } else {
         setTodos([...todos,todo])
